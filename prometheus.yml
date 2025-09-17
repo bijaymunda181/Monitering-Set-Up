@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'node_exporters'
+    static_configs:
+      - targets:
+          - <ip of 1st client server:9100'>  # Server A
+          - <'ip of 2nd client server:9100'> #server B
+rule_files:
+  - "/etc/prometheus/alert-rules.yml"
+  #Now Prometheus collects system metrics from Node Exporter 🎉
