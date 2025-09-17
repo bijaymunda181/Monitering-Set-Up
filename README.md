@@ -1,3 +1,3 @@
 # Monetring Set-Up
 </br>
-Promethous, Node-Exporter, Grafana
+Prometheus, Node-Exporter, Grafana
