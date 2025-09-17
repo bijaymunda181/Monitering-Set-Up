@@ -10,3 +10,4 @@ scrape_configs:
 rule_files:
   - "/etc/prometheus/alert-rules.yml"
   #Now Prometheus collects system metrics from Node Exporter 🎉
+  #change client ip's to you actual servers ip
