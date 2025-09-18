@@ -26,6 +26,7 @@ sudo cp -r console_libraries /etc/prometheus
 sudo cp prometheus.yml /etc/prometheus/
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 
+
 #6. Copy Prometheus Systemd Service
 sudo cp prometheus.service /etc/systemd/system/prometheus.service
 
