@@ -28,6 +28,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 
 
 #6. Copy Prometheus Systemd Service
+
 sudo cp prometheus.service /etc/systemd/system/prometheus.service
 
 #7. Start Prometheus
