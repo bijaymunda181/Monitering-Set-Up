@@ -29,6 +29,7 @@ echo -e "\e[32m Renaming Prometheus service \e[0m"
   mv prometheus-3.9.1.linux-amd64 prometheus
 
 echo -e "\e[32m Starting Prometheus service\e[0m"
+  systemctl daemon-reload
   systemctl start prometheus
   systemctl enable prometheus
   if [ $? -eq 0 ]; then
