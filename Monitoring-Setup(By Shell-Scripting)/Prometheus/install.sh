@@ -33,7 +33,7 @@ echo -e "\e[32m Starting Prometheus service\e[0m"
   systemctl start prometheus
   systemctl enable prometheus
   if [ $? -eq 0 ]; then
-    echo -e "/e[32m service started \e[0m"
+    echo -e "\e[32m service started \e[0m"
     else
-      echo -e "/e[31Failed to start the service \e[0m"
+      echo -e "\e[31Failed to start the service \e[0m"
   fi
