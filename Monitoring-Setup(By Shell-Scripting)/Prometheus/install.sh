@@ -3,6 +3,7 @@ git pull
 if [ $(id -u ) -ne 0 ]; then
   echo "You Should Run as a root user"
   exit 1
+fi
 
 echo -e "\e[\e[32m Removing old Prometheus installation if any\e[0m"
 if [-d /opt/promethous ]; then
