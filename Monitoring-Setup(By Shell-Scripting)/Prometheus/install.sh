@@ -6,7 +6,7 @@ if [ $(id -u ) -ne 0 ]; then
 fi
 
 echo -e "\e[\e[32m Removing old Prometheus installation if any\e[0m"
-if [-d /opt/promethous ]; then
+if [ -d /opt/promethous ]; then
   systemctl stop prometheus
   rm -rf /opt/prometheus /etc/systemd/system/prometheus.service
   fi
