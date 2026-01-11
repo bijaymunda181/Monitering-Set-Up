@@ -2,7 +2,7 @@
 echo -e "\e[32m Full the changes if any \e[0m"
 git pull
 
-if [ $(id -u) -nq 0 ]; then
+if [ $(id -u) -ne 0 ]; then
   echo "You should Run as root user"
   exit 1
   fi
