@@ -21,19 +21,19 @@ echo -e "\e[32m Download Prometheus package\e[0m"
 curl -LO https://github.com/prometheus/prometheus/releases/download/v3.9.1/prometheus-3.9.1.linux-amd64.tar.gz
 
 echo -e "\e[32m Extracting Prometheus service \e[0m"
-  tar -xf  prometheus-3.9.1.linux-amd64.tar.gz
+  tar -xf prometheus-3.9.1.linux-amd64.tar.gz
 
-echo -e "e\[32m Cleaning Up \e[0m"
+echo -e "\e[32m Cleaning Up \e[0m"
   rm -rf prometheus-3.9.1.linux-amd64.tar.gz
 
-echo -e "e/[32m Renaming Prometheus service \e[0m"
+echo -e "\e[32m Renaming Prometheus service \e[0m"
   mv prometheus-3.9.1.linux-amd64.tar.gz prometheus
 
 echo -e "e/[32m Starting Prometheus service"
   systemctl start prometheus
   systemctl enable prometheus
   if [ $? -eq 0 ]; then
-    echo "service started"
+    echo -e "/e[32m service started \e[0m"
     else
-      echo "Failed to start the service"
+      echo -e "/e[31Failed to start the service \e[0m"
   fi
