@@ -36,4 +36,3 @@ echo -e "e/[32m Starting Prometheus service"
     else
       echo "Failed to start the service"
   fi
-
