@@ -29,7 +29,7 @@ echo -e "\e[32m Cleaning Up \e[0m"
 echo -e "\e[32m Renaming Prometheus service \e[0m"
   mv prometheus-3.9.1.linux-amd64.tar.gz prometheus
 
-echo -e "e/[32m Starting Prometheus service"
+echo -e "\e[32m Starting Prometheus service\e[0m"
   systemctl start prometheus
   systemctl enable prometheus
   if [ $? -eq 0 ]; then
