@@ -25,7 +25,7 @@ curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.10.2/n
 echo -e "\e[32m Extracting Node_exporter file \e[0m"
 tar -xf node_exporter-1.10.2.linux-amd64.tar.gz
 
-echo -e "\e[32m  Cleaning Up\e[0m"
+echo -e "\e[32m Cleaning Up\e[0m"
 rm -rf node_exporter-1.10.2.linux-amd64.tar.gz
 
 echo -e "\e[32m Renaming the Node_exporter file\e[0m"
