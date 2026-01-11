@@ -12,7 +12,7 @@ if [ -d /opt/promethous ]; then
   fi
 
 echo -e "\e[32m Copying Prometheus service file \e[0m"
-./prometheus.service /ect/systemd/system/prometheus.service
+./prometheus.service /etc/systemd/system/prometheus.service
 
 echo -e "\e[32m Change Prometheus directories\e[0m"
   cd /opt
