@@ -14,7 +14,7 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 
-echo -e "\e[32mInstalling Grafana\e[0m"
+echo -e "\e[32m Installing Grafana\e[0m"
 yum install grafana -y &>> /tmp/grafana.log
 
 
