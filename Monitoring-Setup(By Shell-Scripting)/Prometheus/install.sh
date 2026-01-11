@@ -26,7 +26,7 @@ echo -e "\e[32m Cleaning Up \e[0m"
   rm -rf prometheus-3.9.1.linux-amd64.tar.gz
 
 echo -e "\e[32m Renaming Prometheus service \e[0m"
-  mv prometheus-3.9.1.linux-amd64.tar.gz prometheus
+  mv prometheus-3.9.1.linux-amd64 prometheus
 
 echo -e "\e[32m Starting Prometheus service\e[0m"
   systemctl start prometheus
