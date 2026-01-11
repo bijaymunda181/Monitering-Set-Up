@@ -19,8 +19,8 @@ yum install grafana -y &>> /tmp/grafana.log
 
 
 echo -e "\e[32m starting grafana \e[0m"
-systemctl enable grafana &>> /tmp/grafana.log
-systemctl restart grafana &>> /tmp/grafana.log
+systemctl enable grafana-server &>> /tmp/grafana.log
+systemctl restart grafana-server &>> /tmp/grafana.log
 
 if [ $? -eq 0 ]; then
   echo -e "\e[32mService Started file\e[0m"
