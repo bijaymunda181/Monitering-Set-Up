@@ -26,17 +26,19 @@ sudo cp -r console_libraries /etc/prometheus
 sudo cp prometheus.yml /etc/prometheus/
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 
+#6. Create Prometheus systemd service file 
+sudo touch Prometheus.service
 
-#6. Copy Prometheus Systemd Service
+#7. Copy Prometheus Systemd Service
 sudo cp prometheus.service /etc/systemd/system/prometheus.service
 
-#7. Start Prometheus
+#8. Start Prometheus
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
 sudo systemctl status prometheus
 
-#8. Access Prometheus UI
+#9. Access Prometheus UI
 
 #Open in browser:
 
