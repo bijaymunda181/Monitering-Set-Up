@@ -19,7 +19,6 @@ echo -e "\e[32m Change Prometheus directories\e[0m"
 
 echo -e "\e[32m Download Prometheus package\e[0m"
 curl -LO https://github.com/prometheus/prometheus/releases/download/v3.9.1/prometheus-3.9.1.linux-amd64.tar.gz
-
 echo -e "\e[32m Extracting Prometheus service \e[0m"
   tar -xf prometheus-3.9.1.linux-amd64.tar.gz
 
