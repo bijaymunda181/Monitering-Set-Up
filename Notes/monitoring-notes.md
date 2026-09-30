@@ -16,3 +16,18 @@ We can access the ```/metrics``` endpoint:
 ```
 curl http://localhost:9100/metrics
 ```
+## 6. Where do you create the Node Exporter service file?
+```
+/etc/systemd/system/node_exporter.service
+```
+
+## 7. What is ```ExecStart```?
+```ExecStart``` specifies the command that systemd should execute when starting the service.</br>
+**Example:**
+```
+ExecStart=/usr/local/bin/node_exporter
+```
+It means systemd will execute:
+```
+/usr/local/bin/node_exporter
+```
