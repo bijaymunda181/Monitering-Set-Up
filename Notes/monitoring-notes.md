@@ -31,3 +31,41 @@ It means systemd will execute:
 ```
 /usr/local/bin/node_exporter
 ```
+
+## 8. Why do we create a separate ```node_exporter``` user?
+We create a dedicated user to run Node Exporter instead of running it as root. This follows the principle of least privilege and improves security.
+
+## 9. How does Prometheus collect Node Exporter metrics?
+Prometheus uses a pull-based model. It periodically sends an HTTP request to the Node Exporter's /metrics endpoint and collects the metrics.</br>
+For example:
+```
+Prometheus
+    |
+    | GET http://server:9100/metrics
+    ↓
+Node Exporter
+```
+
+## 10. Where do you configure the Node Exporter target?
+Usually in:</br>
+```
+/etc/prometheus/prometheus.yml
+```
+Example:
+```
+scrape_configs:
+  - job_name: "node_exporter"
+    static_configs:
+      - targets: ["10.0.1.10:9100"]
+```
+
+## 11. What is a scrape target?
+A scrape target is an endpoint from which Prometheus collects metrics.</br>
+For Node Exporter:
+```
+10.0.1.10:9100
+```
+is the target.
+
+## 12. What happens if Node Exporter is down?
+Prometheus will not be able to scrape new metrics from that server. The target will become DOWN, and no new Node Exporter metrics will be collected until the exporter becomes available again.
