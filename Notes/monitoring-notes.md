@@ -114,3 +114,13 @@ I would also check:
 ls -l /usr/local/bin/node_exporter
 ```
 And verify the ```ExecStart``` path in service file.
+
+## 15. ```curl localhost:9100/metrics``` works, but Prometheus cannot access it. What could be the problem?
+If it works locally but not from the Prometheus server, I would check network connectivity and security controls.</br>
+I would check :
+- Security Group
+- Linux firewall
+- Network ACL
+- Routing
+- Port 9100
+- Node Exporter's listening address
