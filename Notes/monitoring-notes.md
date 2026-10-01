@@ -69,3 +69,33 @@ is the target.
 
 ## 12. What happens if Node Exporter is down?
 Prometheus will not be able to scrape new metrics from that server. The target will become DOWN, and no new Node Exporter metrics will be collected until the exporter becomes available again.
+
+## 13. Prometheus shows Node Exporter as DOWN. How would you troubleshoot?
+I would troubleshoot step by step:
+```
+1. Check Node Exporter service
+        ↓
+2. Check port 9100
+        ↓
+3. Test /metrics locally
+        ↓
+4. Test connectivity from Prometheus server
+        ↓
+5. Check firewall / Security Group
+        ↓
+6. Check Prometheus configuration
+```
+Commands:
+```
+systemctl status node_exporter
+```
+```
+ss -lntp | grep 9100
+```
+```
+curl http://localhost:9100/metrics
+```
+From the Prometheus server:
+```
+curl http://<server-ip>:9100/metrics
+```
