@@ -124,3 +124,6 @@ I would check :
 - Routing
 - Port 9100
 - Node Exporter's listening address
+
+## 16. Explain the complete monitoring flow.(Important)
+Node Exporter runs on the Linux server and collects system-level metrics such as CPU, memory, disk, and network metrics. It exposes these metrics on port 9100. Prometheus periodically scrapes the Node Exporter ```/metrics``` endpoint and stores the metrics. Grafana then connects to Prometheus and visualizes the metrics through dashboards.
