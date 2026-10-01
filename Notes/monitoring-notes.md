@@ -99,3 +99,18 @@ From the Prometheus server:
 ```
 curl http://<server-ip>:9100/metrics
 ```
+
+## 14. Node Exporter service is failing. What would you check?
+First: I would check service status
+```
+systemctl status node_exporter
+```
+Then I'll check the node_exporter logs:
+```
+journalctl -u node_exporter
+```
+I would also check:
+```
+ls -l /usr/local/bin/node_exporter
+```
+And verify the ```ExecStart``` path in service file.
