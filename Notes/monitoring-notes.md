@@ -3,7 +3,7 @@ Prometheus is a white box monitoring tool. </br>
 White box means insights are visible.
 
 ## 2. What is Node Exporter ?
-Node exporter is a prometheus that collects system level metrics from linux servers, such as CPU, memory, disk, filesystem, network metrics, and expose them for prometheus to scraps.
+Node exporter is a prometheus exporter that collects system level metrics from linux servers, such as CPU, memory, disk, filesystem, network metrics, and expose them for prometheus to scraps.
 
 ## 3. Why do we use Node Exporter ?
 We use Node Exporter to collect linux server metrics and make them available to Prometheus for monitoring.
