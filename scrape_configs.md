@@ -22,3 +22,17 @@ scrape_configs:
     - targets: ["172.16.0.2:9100"]
       labels:
       name: "Node-1"      
+
+# Note:- 
+# There is feature called service discover that can automatically find targets(server) that prometheus needs to monitor.
+# Prerequisites are for the Prometheus server are should have attached IAM Role with AmazonEC2ReadOnlyAccess or ec2:DescribeInstances permission . And node-exporter should install also.
+# For the target server only node-exporter should be installed.
+
+scrape_configs:
+- job_name: 'ec2'
+  ec2_sd_configs:
+    - region: us-east-1
+      port: 9100
+
+    - region: ap-south-1
+      port: 9100
