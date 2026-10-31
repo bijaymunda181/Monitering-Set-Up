@@ -1,0 +1,13 @@
+groups:
+  - name: ec2
+    labels:
+      team: CloudSupportTeam
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        keep_firing_for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: Instance Down
