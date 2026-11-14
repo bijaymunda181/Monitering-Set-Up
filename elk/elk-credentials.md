@@ -1,4 +1,4 @@
-username = ```elastic```
+username = ```elastic```</br>
 password = ```
 Authentication and authorization are enabled.
 TLS for the transport and HTTP layers is enabled and configured.
