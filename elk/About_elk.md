@@ -8,7 +8,7 @@ ELK stands for:
   It is commonly used by Linux administrators, DevOps engineers, and Cloud Support Engineers to monitor and troubleshoot servers and applications.</br>
 1. Three components of ELK Stack
 
-![img.png](img.png)1. Elasticsearch</br>
+![img_3.png](img_3.png)1. Elasticsearch</br>
 
 Stores, indexes, and searches log data.</br>
 
