@@ -21,14 +21,7 @@ Example: Read /var/log/secure, filter failed login messages, and forward them.</
 Provides a web-based dashboard to visualize and analyze logs.</br>
 Example: View SSH failures, HTTP errors, and application errors through graphs and dashboards.</br>
 
-
-
-**2. How ELK works**</br>
-   Suppose your company has 100 Linux servers running on AWS EC2.</br>
-
-
 **Real-time example:**</br>
-
 A user tries to SSH into a Linux server but gets permission denied.
 1. The Linux server generates an authentication failure log.
 2. Logstash collects the log.
