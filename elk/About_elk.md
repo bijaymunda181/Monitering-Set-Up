@@ -5,26 +5,20 @@ ELK stands for:
 - E – Elasticsearch
 - L – Logstash
 - K – Kibana
-  It is commonly used by Linux administrators, DevOps engineers, and Cloud Support Engineers to monitor and troubleshoot servers and applications.</br>
-1. Three components of ELK Stack
+It is commonly used by Linux administrators, DevOps engineers, and Cloud Support Engineers to monitor and troubleshoot servers and applications.</br>
+## 1. Three components of ELK Stack
 
-1. Elasticsearch</br>
-
+1. **Elasticsearch**</br>
 Stores, indexes, and searches log data.</br>
-
 Example: Search all SSH login failures across 100 Linux servers.</br>
 
 
-2. Logstash</br>
-
+2. **Logstash**</br>
 Collects, processes, and transforms log data before sending it to Elasticsearch.</br>
-
 Example: Read /var/log/secure, filter failed login messages, and forward them.</br>
 
-3. Kibana</br>
-
+3. **Kibana**</br>
 Provides a web-based dashboard to visualize and analyze logs.</br>
-
 Example: View SSH failures, HTTP errors, and application errors through graphs and dashboards.</br>
 
 
